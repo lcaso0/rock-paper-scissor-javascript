@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>rock paper scissors</title>
+  <!-- stylesheet link tag -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+  <div class="info">
+    <h1 class="title">Rock Paper Scissor</h1>
+    <div class="scores">
+      <div class="score">
+        <h2>Player</h2>
+        <p id="playerscore">0</p>
+      </div>
+      
+      <div class="score">
+        <h2>Computer</h2>
+        <p id="computerscore">0</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="container" id="container">
+    <h1>Choose Your Move</h1>
+    <h3>Move left: <span id="moveleft">10</span></h3>
+    <div class="moves">
+      <div id="rock">
+        <span class="iconify move" data-icon="fa-solid:hand-rock" data-width="64" data-height="64"></span>
+      </div>
+      
+      <div id="paper">
+        <span class="iconify move" data-icon="fa-solid:hand-paper" data-width="64" data-height="64"></span>
+      </div>
+      
+      <div id="scissor">
+        <span class="iconify move" data-icon="fa-solid:hand-scissors" data-width="64" data-height="64"></span>
+      </div>
+      
+    </div>
+    <h3 id="whowins" style="margin-top: 35px;"></h3>
+  </div>
+  
+  <!-- icon script tag -->
+  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+  <!-- javascript script tag -->
+  <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
