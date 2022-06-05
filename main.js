@@ -6,11 +6,11 @@ document.getElementById("rock").onclick = function() {
   
   if (random_move == "rock") {
     //console.log("Draw");
-    draw();
+    draw(random_move);
   }
   if (random_move == "paper") {
     //console.log("You Lose");
-    lose();
+    lose(random_move);
   }
   if (random_move == "scissor") {
     //console.log("You win");
@@ -28,11 +28,11 @@ document.getElementById("paper").onclick = function() {
   }
   if (random_move == "paper") {
     //console.log("Draw");
-    draw();
+    draw(random_move);
   }
   if (random_move == "scissor") {
     //console.log("You Lose");
-    lose();
+    lose(random_move);
   }
 }
 
@@ -42,7 +42,7 @@ document.getElementById("scissor").onclick = function() {
   
   if (random_move == "rock") {
     //console.log("You Lose")
-    lose();
+    lose(random_move);
   }
   if (random_move == "paper") {
     //console.log("You Win");
@@ -50,7 +50,7 @@ document.getElementById("scissor").onclick = function() {
   }
   if (random_move == "scissor") {
     //console.log("Draw");
-    draw();
+    draw(random_move);
   }
 }
 
@@ -63,16 +63,16 @@ function win() {
   decreasemove();
 }
 
-function lose() {
+function lose(computermove) {
   var computerscore = document.getElementById("computerscore").innerText;
   var computerscore_int = parseInt(computerscore);
   document.getElementById("computerscore").innerText = computerscore_int + 1;
-  document.getElementById("whowins").innerText = "Computer Win";
+  document.getElementById("whowins").innerText = "Computer Win with " + computermove;
   decreasemove();
 }
 
-function draw() {
-  document.getElementById("whowins").innerText = "DRAW";
+function draw(computermove) {
+  document.getElementById("whowins").innerText = "DRAW " + computermove;
   decreasemove();
 }
 
